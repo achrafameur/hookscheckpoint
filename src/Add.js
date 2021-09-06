@@ -12,13 +12,13 @@ function Example({handleAddMovie}) {
     const [newMovie, setNewMovie] = useState({
             title:'',
             description:'',
-            posterurl:'',
+            posterUrl:'',
             rate:0,
     });
 
     const handleChange = (e) =>{
         setNewMovie({...newMovie, [e.target.name]:e.target.value}) 
-        if(newMovie.title !=='' && newMovie.description !=='' && newMovie.posterurl !=='')
+        if(newMovie.title !=='' && newMovie.description !=='' && newMovie.posterUrl !=='')
         setDisableSave(false)
         else
         setDisableSave(true)
@@ -58,7 +58,7 @@ function Example({handleAddMovie}) {
 
                             <Form.Group className="mb-3" controlId="formBasicCheckbox">
                                 <Form.Label>PosterUrl</Form.Label>
-                                <Form.Control name="posterurl" type="text" placeholder="Enter PosterUrl" onChange={handleChange}/>
+                                <Form.Control name="posterUrl" type="text" placeholder="Enter PosterUrl" onChange={handleChange}/>
                             </Form.Group>
 
                             <Form.Group className="mb-3" controlId="formBasicCheckbox">
